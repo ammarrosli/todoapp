@@ -53,7 +53,7 @@ class listController extends Controller
 
     public function delete(Request $request, $id){
       listModel::destroy($id);
-      return redirect()->back();
+      return redirect()->back()->with('success', 'Todo list is deleted')->with('hideMessageAfter', 1);
     }
 
     public function edit($id){

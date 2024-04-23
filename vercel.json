@@ -1,4 +1,7 @@
 {
+    "rewrites": [
+        {"source": "/(.*)", "destination": "/"}
+    ],
     "version": 2,
       "framework": null,
     "functions": {
@@ -23,6 +26,5 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
-    },
-    "outputDirectory": "public"
+    }
 }

@@ -1,17 +1,26 @@
 {
+
     "version": 2,
       "framework": null,
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.7.1" }
     },
-    "routes": [{
+    "routes": [
+        {
+            "src": "/img/(.*)",
+            "dest": "/public/img/"
+        },
+        {
         "src": "/(.*)",
         "dest": "/api/index.php"
-    }],
+    }
+        ],
+
+
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://todopjct.com",
+        "APP_URL": "https://todopjct.vercel.app",
  
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -23,5 +32,9 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
-    }
+    },
+
+    "rewrites": [
+        {"source": "/(.*)", "destination": "/"}
+    ]
 }

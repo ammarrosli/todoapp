@@ -91,8 +91,8 @@ class listController extends Controller
       // If you need to update associated models like user, status, and category,
       // you can retrieve them and update them similarly
 
-      $completed = $request->has('completed')? '1' : null;
-      $listtodo->completed=$completed;
+      // $completed = $request->has('completed')? '1' : null;
+      // $listtodo->completed=$completed;
   
       // Save the changes
       $listtodo->save();
